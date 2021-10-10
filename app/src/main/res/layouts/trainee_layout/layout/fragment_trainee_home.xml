@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Trainee.TraineeActivity">
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/search_trainee_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#26272E">
+
+        <Spinner
+            android:id="@+id/spinner_sport_trainee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/picker_date_plan_button"
+            style="?android:spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_data"
+            android:onClick="datePickerTraineeDialog"
+            android:text="JAN 01 2020"
+            android:textSize="8pt" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="initSearchByFitnessType"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_action_search_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/trainee_home_page_bar"
+        android:background="#233FA6CD"
+        android:layout_below="@+id/search_trainee_bar_home"
+        android:layout_width="wrap_content"
+        android:paddingRight="15dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/welcome_back"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:text="Welcome Back,"
+            android:textColor="@color/white"
+            android:textSize="10pt" />
+        <TextView
+            android:id="@+id/welcome_back_edit"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:layout_below="@+id/welcome_back"
+            android:text="Name"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:civ_border_color="#9FBDD2"
+        app:civ_border_width="2dp"
+        android:src="@mipmap/avatar"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_show_trainee_training"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#26272E"
+        android:layout_below="@+id/trainee_home_page_bar" />
+
+</RelativeLayout>

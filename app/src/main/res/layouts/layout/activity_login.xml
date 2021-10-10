@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    android:padding="50dp"
+    tools:context=".LoginActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/main_icon"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="59dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/main_icon" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:paddingBottom="10dp"
+                android:id="@+id/username_TextLayout"
+                android:layout_below="@id/main_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/login_email"
+                    android:drawableLeft="@drawable/ic_action_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                app:passwordToggleEnabled="true"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/username_TextLayout"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login_cardview"
+                android:onClick="loginButton"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:layout_centerInParent="true"
+                android:text="Login"
+                android:background="@drawable/radius_color_button_corner"/>
+
+            /*andrew*/
+            <TextView
+                android:id="@+id/smsOTPButton"
+                android:onClick="smsOTP"
+                android:layout_below="@+id/login_cardview"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Login Via SMS"
+                android:textColor="#8BC34A"
+                android:fontFamily="sans-serif-black"
+                android:textSize="17sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignEnd="@+id/login_cardview"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:onClick="registrationButton"
+                android:layout_below="@id/smsOTPButton"
+
+                android:layout_marginTop="25dp">
+            </TextView>
+            <TextView
+                android:onClick="forgetPasswordButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forget_account"
+                android:layout_below="@id/smsOTPButton"
+                android:layout_alignStart="@id/smsOTPButton"
+                android:layout_marginTop="25dp">
+            </TextView>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_ProgressBar"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/yellow_highlight"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".Admin.adminStats.AdminStatisticCharts">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/admin_statistic_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChartTraining"
+                android:layout_width="match_parent"
+                android:layout_height="300sp"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_below="@+id/pieChartTraining"
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:id="@+id/barChart"/>
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_below="@id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/lineChartSign"/>
+            <com.github.mikephil.charting.charts.RadarChart
+                android:layout_below="@id/lineChartSign"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/ageRadarChart"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

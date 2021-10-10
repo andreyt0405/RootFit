@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/card_admin_static"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView1_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="First Name: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView2_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Last Name: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1_admin" />
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        <TextView
+            android:id="@+id/textView3_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Age: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2_admin" />
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        <TextView
+            android:id="@+id/textView4_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Email: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3_admin" />
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/age" />
+        <TextView
+            android:id="@+id/textView5_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Phone: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4_admin" />
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+        <TextView
+            android:id="@+id/textView6_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Gender: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5_admin" />
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+        <TextView
+            android:id="@+id/textView7_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="State: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6_admin" />
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Username: "
+            android:textStyle="bold"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7_admin" />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView1_admin"
+            app:layout_constraintTop_toBottomOf="@+id/state" />
+        <RelativeLayout
+            app:layout_constraintTop_toBottomOf="@+id/username"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/singleItemCardView_Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_cornor_admin"
+                android:text="Delete"
+                android:layout_alignParentLeft="true"/>
+            <Button
+                android:id="@+id/singleItemCardView_updateInfo"
+                android:background="@drawable/radius_cornor_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

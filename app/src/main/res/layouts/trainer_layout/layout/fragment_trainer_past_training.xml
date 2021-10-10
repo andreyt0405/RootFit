@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2B0621"
+    tools:context=".Trainer.TrainerActivity">
+    <LinearLayout
+        android:id="@+id/search_trainer_bar_over"
+        android:layout_width="match_parent"
+        android:background="@color/blue_low_opacity"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/spinner_sport_types_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/picker_button_date_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JAN 01 2020"
+            style="?android:spinnerStyle"
+            android:textSize="8pt"
+            android:onClick="pickUpDateTrainer"
+            android:layout_below="@+id/select_data"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_search_icon" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_past_training"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_trainer_bar_over"/>
+</RelativeLayout>

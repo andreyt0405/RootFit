@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_low_opacity"
+    tools:context=".Trainer.TrainerTrainingItemActivity">
+    <LinearLayout
+        android:id="@+id/search_trainer_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_low_opacity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RatingBar
+                android:id="@+id/rating_past_activity"
+                android:progressTint="#82CF27"
+                android:layout_width="wrap_content"
+                android:progressBackgroundTint="#59FFFFFF"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:numStars="5"
+                android:stepSize="0.1" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/training_item_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@id/search_trainer_bar_home">
+        <TextView
+            android:id="@+id/training_schedule_title"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:text="Training Schedule"/>
+        <TextView
+            android:id="@+id/training_schedule_trainer_name"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_title"
+            android:text="Trainer Name:"/>
+        <TextView
+            android:id="@+id/training_schedule_trainer_name_edit"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_title"
+            android:layout_marginHorizontal="120dp"
+            android:text="@string/welcome"/>
+
+        <TextView
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_trainer_name"
+            android:text="Schedule Date:"/>
+        <TextView
+            android:id="@+id/training_schedule_date_edit"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_trainer_name"
+            android:layout_marginHorizontal="120dp"
+            android:text="@string/welcome"/>
+        <TextView
+            android:id="@+id/training_schedule_time"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_date_edit"
+            android:text="Schedule Time:"/>
+        <TextView
+            android:id="@+id/training_schedule_time_edit"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_date_edit"
+            android:layout_marginHorizontal="120dp"
+            android:text="@string/welcome"/>
+
+        <TextView
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_schedule_time"
+            android:text="Trainer Expertise:"/>
+        <TextView
+            android:id="@+id/training_schedule_expertise_edit"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:layout_marginHorizontal="120dp"
+            android:layout_below="@+id/training_schedule_time" />
+    </RelativeLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_trainee_detail_past_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/training_item_details" />
+</RelativeLayout>

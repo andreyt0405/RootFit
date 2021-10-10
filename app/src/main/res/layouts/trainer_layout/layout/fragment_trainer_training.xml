@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#213840"
+    android:padding="30dp"
+    tools:context=".Trainer.TrainerActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:padding="30dp"
+            android:background="@drawable/card_trainee_in_training"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/plan_traning_trainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:shadowColor="#3B000000"
+        android:background="@drawable/card_trainee_in_training"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:text="GET UP YOUR BUTT!"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/select_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plan_traning_trainer"
+        android:layout_marginTop="20dp"
+        android:text="Select Data"
+        android:textSize="8pt" />
+
+    <Button
+        android:id="@+id/pickerButtonDate"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_data"
+        android:onClick="pickUpDateTrainer"
+        android:text="JAN 01 2020"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/select_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pickerButtonDate"
+        android:layout_marginTop="20dp"
+        android:text="Select Time"
+        android:textSize="8pt" />
+
+    <Button
+        android:id="@+id/pickerButtonTime"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_time"
+        android:onClick="pickUpTimeTrainer"
+        android:text="- - : - -"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/select_max_trinee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickerButtonTime"
+        android:layout_marginTop="20dp"
+        android:text="Select Maximum Participants"
+        android:textSize="8pt" />
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/number_partic_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_max_trinee"
+        app:np_dividerColor="#535353"
+        app:np_max="22"
+        app:np_min="5"
+        app:np_orientation="horizontal"
+        app:np_selectedTextColor="#7CD517"
+        app:np_selectedTextSize="12pt"
+        app:np_textColor="@color/white"
+        app:np_value="3" />
+
+    <Button
+        android:id="@+id/save_data_trinee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_partic_picker"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#BEBFD111"
+        android:background="@drawable/radius_cornor_non_color"
+        android:onClick="createPlanTraining"
+        android:textColor="@color/black"
+        android:textSize="8pt"
+        android:text="Plan Training" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

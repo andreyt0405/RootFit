@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "971187409788",
+    "firebase_url": "https://rootfit-bc6cc-default-rtdb.firebaseio.com",
+    "project_id": "rootfit-bc6cc",
+    "storage_bucket": "rootfit-bc6cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971187409788:android:c3cf903914835decbc8af9",
+        "android_client_info": {
+          "package_name": "com.sportschule.rootfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971187409788-fbnlunpvd45m0jq09eodktd85knmjgie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2N0AfbWnHEkzbB3PJyamCZVeWSMo4cuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971187409788-fbnlunpvd45m0jq09eodktd85knmjgie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

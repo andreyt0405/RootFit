@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_register"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Update User Data Panel"
+        android:background="@drawable/radius_cornor_panel"
+        android:gravity="center"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:textColor="@color/white"
+        android:id="@+id/updatefirstname_admin_update"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:textColor="@color/white"
+        android:id="@+id/updatelastname_admin_update"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:textColor="@color/white"
+        android:id="@+id/updateage"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:textColor="@color/white"
+        android:id="@+id/updatephone"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_cornor_admin"
+        android:text="Update user Info"
+        android:id="@+id/updatesubmit"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:background="@drawable/radius_cornor_admin"
+        android:id="@+id/updatecancel"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

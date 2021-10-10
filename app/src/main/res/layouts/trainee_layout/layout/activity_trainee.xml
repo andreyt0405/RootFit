@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Trainee.TraineeActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_trainee"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/trainee_home_page"
+            android:text="Home"
+            android:icon="@drawable/ic_action_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/trainee_training_page"
+            android:icon="@drawable/ic_action_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Training" />
+
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/ic_action_conclusion"
+            android:id="@+id/trainee_unbook_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Pain No Gain" />
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_trainee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tablayout_trainee"
+        android:layout_marginBottom="3dp" >
+    </androidx.viewpager.widget.ViewPager>
+</RelativeLayout>

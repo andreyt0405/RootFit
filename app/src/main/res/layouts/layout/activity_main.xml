@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:background="#2c404f "
+    android:layout_height="fill_parent">
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/splash_screen"
+        android:layout_height="500dp"
+        android:layout_width="wrap_content"
+        android:src="@drawable/strach_gif">
+    </pl.droidsonroids.gif.GifImageView>
+    <TextView
+        android:id="@+id/motivation_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/splash_screen">
+    </TextView>
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Root Fit</string>
+    <string name="register">Not Registered yet?</string>
+    <string name="forget_account">Forget credentials?</string>
+    <string-array name="motivation_string">
+        <item>"“Every professional was once an amateur“"</item>
+        <item>"“The ones who say you can't are too afraid you will“"</item>
+        <item>"“Think training's hard try losing“"</item>
+        <item>"“Obsessed is a word\nThe lazy use to describe the dedicated“"</item>
+        <item>"“Play by the rule's but be ferocious“"</item>
+        <item>"“Failure does not indicated as lose“"</item>
+    </string-array>
+    <string-array name="spinnerTrainerPlanItems">
+        <item>Crossfit</item>
+        <item>Aerobics</item>
+        <item>Yoga</item>
+        <item>Fitness</item>
+        <item>My Training</item>
+    </string-array>
+    <string-array name="spinnerTraineePlanItem">
+        <item>Crossfit</item>
+        <item>Aerobics</item>
+        <item>Yoga</item>
+        <item>Fitness</item>
+    </string-array>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_training_planed">You have already Planned Training Please check your schedule!</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_last">Last Name</string>
+    <string name="prompt_weak_password">Weak Password,Should contains 8 characters</string>
+    <string name="prompt_Error_Phone_NUMBER">Phone number length should be 10 digits exactly!</string>
+    <string name="prompt_invalid_email">Email has taken or Invalid Google format</string>
+    <string name="prompt_get_start">GET STARTED</string>
+    <string name="prompt_integrate_sport">YOU have brains in your head.
+You have feet in your shoes.
+You CAN steer yourself any direction
+you CHOOSE.</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="string_plan_training">Scheduled Training</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="prompt_age">"Age"</string>
+    <string name="prompt_save_data">"Finish"</string>
+    <string name="prompt_reset_password">"Rest Pass"</string>
+    <string name="prompt_remove_account">"Remove User"</string>
+    <string name="prompt_change_email">"Rest Email"</string>
+    <string name="prompt_check_time">"Please choose training time"</string>
+    <string name="prompt_email_has_changed">"Email Has Changed\nPress Finish"</string>
+    <string name="prompt_account_will_remove">"Your Account will deleted permanently\nDo you want continue"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="time_has_over">The hour has already over\nYou can create training in the next day!</string>
+    <string name="training_taken">Training Time already taken!</string>
+    <string name="phone">phone</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="we_will_send_you_an_one_time_password_on_this_mobile_number">We will send you an one time password on this mobile number</string>
+    <string name="_972">+972</string>
+    <string name="_50_1234567">50_1234567</string>
+    <string name="enter_password_you_have_received_by_sms">Enter password you have received by sms</string>
+    <string name="resend">Resend</string>
+    <string name="account_removed">Account deactivated successfully,App is restring </string>
+    <string name="verify">Verify</string>
+    <string name="send_one_time_password">Send one time password</string>
+    <string name="did_not_received_the_password">Did not received the password</string>
+    <string name="otp_verification1">OTP Verification</string>
+    <string name="enter_mobile_number1">enter mobile number</string>
+
+
+</resources>
