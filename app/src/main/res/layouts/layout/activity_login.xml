@@ -23,8 +23,9 @@
                 app:srcCompat="@drawable/main_icon" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:paddingBottom="10dp"
                 android:id="@+id/username_TextLayout"
+                app:passwordToggleEnabled="true"
+                android:paddingBottom="10dp"
                 android:layout_below="@id/main_icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -32,6 +33,7 @@
                 <EditText
                     android:id="@+id/login_email"
                     android:drawableLeft="@drawable/ic_action_login"
+                    android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email" />
