@@ -47,7 +47,7 @@ you CHOOSE.</string>
     <string name="prompt_change_email">"Rest Email"</string>
     <string name="prompt_check_time">"Please choose training time"</string>
     <string name="prompt_email_has_changed">"Email Has Changed\nPress Finish"</string>
-    <string name="prompt_account_will_remove">"Your Account will deleted permanently\nDo you want continue"</string>
+    <string name="prompt_account_will_remove">"Your Account will remove permanently\nDo you want continue"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <!--
     This string is used for square devices and overridden by hello_world in
