@@ -21,6 +21,7 @@
 
     <EditText
         android:layout_width="match_parent"
+        android:inputType="textWebEditText"
         android:layout_height="wrap_content"
         android:hint="First Name"
         android:textColor="@color/white"
@@ -30,6 +31,7 @@
 
     <EditText
         android:layout_width="match_parent"
+        android:inputType="textWebEditText"
         android:layout_height="wrap_content"
         android:hint="Last Name"
         android:textColor="@color/white"
