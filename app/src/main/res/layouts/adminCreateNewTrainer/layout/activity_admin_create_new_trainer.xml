@@ -25,6 +25,7 @@
                 <EditText
                     android:id="@+id/trainer_name"
                     android:drawableLeft="@drawable/ic_action_name"
+                    android:inputType="textWebEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_name" />
@@ -39,6 +40,7 @@
                     android:drawableLeft="@drawable/ic_action_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textWebEditText"
                     android:hint="@string/prompt_last" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,6 +53,7 @@
                     android:id="@+id/trainer_username"
                     android:drawableLeft="@drawable/ic_action_login"
                     android:layout_width="match_parent"
+                    android:inputType="textWebEditText"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_username" />
             </com.google.android.material.textfield.TextInputLayout>
