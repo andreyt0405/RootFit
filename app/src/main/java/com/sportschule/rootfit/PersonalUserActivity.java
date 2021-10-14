@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.util.ArrayMap;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -238,8 +239,9 @@ public class PersonalUserActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Edit Details");
         final View customLayout = getLayoutInflater().inflate(R.layout.credential_dialog, null);
-        EditText inputHint = customLayout.findViewById(R.id.input_line);
-        inputHint.setHint(item);
+        EditText inputConst = customLayout.findViewById(R.id.input_line);
+        inputConst.setInputType(position==3 || position==6?InputType.TYPE_CLASS_NUMBER:InputType.TYPE_CLASS_TEXT);
+        inputConst.setHint(item);
         builder.setView(customLayout);
         builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
             @Override
@@ -248,7 +250,7 @@ public class PersonalUserActivity extends AppCompatActivity {
                 if (!inputLine.getText().toString().equals("")) {
                     String inputLineValue = item.substring(0, item.indexOf(":") + 2) + inputLine.getText().toString();
                     if (position == 3) {
-                        if (inputLine.getText().toString().matches("[0-9]+") && inputLine.getText().toString().length() >= 2
+                        if (inputLine.getText().toString().length() >= 2
                                 && inputLine.getText().toString().length() < 3) {
                             ageBeforeUpdate = Integer.parseInt(list.get(position).substring(list.get(position).indexOf(":") + 1).trim());
                             list.set(position, inputLineValue);
@@ -264,7 +266,7 @@ public class PersonalUserActivity extends AppCompatActivity {
                         }
                     }
                     if (position == 6) {
-                        if (inputLine.getText().toString().matches("[0-9]+") && inputLine.getText().toString().length() == 10) {
+                        if (inputLine.getText().toString().length() == 10) {
                             phoneNumberValidation(inputLineValue,position,dialog);
                         } else {
                             dialog.dismiss();
