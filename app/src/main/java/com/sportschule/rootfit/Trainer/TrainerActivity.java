@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -142,7 +143,7 @@ public class TrainerActivity extends AppCompatActivity implements RangeTimePicke
                     LocalDate localDateTraining = LocalDate.parse(year+"-"+(month+1)+"-"+day);
                     if(Days.daysBetween(localDate,localDateTraining).getDays()>7)
                     {
-                        toast.toastMessage("Create a training allows up to one 7 days");
+                        toast.toastMessage("Create a training allows up to 7 days", Gravity.CENTER);
                         return;
                     }
                 }
