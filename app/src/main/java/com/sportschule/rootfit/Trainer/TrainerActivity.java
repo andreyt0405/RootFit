@@ -48,6 +48,9 @@ import com.sportschule.rootfit.R;
 import com.sportschule.rootfit.ToastCustomMessage;
 import com.sportschule.rootfit.TrainingPropertyCollector;
 
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -67,10 +70,11 @@ public class TrainerActivity extends AppCompatActivity implements RangeTimePicke
     Spinner spinnerSportType,spinnerSportTypePast;
     Button createTrainButton,dateButtonPlan,timSelectButton, dateButtonPast;
     RecyclerView recyclerView;
-    static LayoutInflater inflater;
-    static View toastLayout;
     ToastCustomMessage toast;
     Intent trainerIntent;
+    LocalDate localDate;
+    static LayoutInflater inflater;
+    static View toastLayout;
     private View parentLayout;
     private SharedPreferences sharedPreferences;
     private static final String SHARED_PREFS = "sharedPrefs";
@@ -98,6 +102,7 @@ public class TrainerActivity extends AppCompatActivity implements RangeTimePicke
         sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         trainerExpertise = sharedPreferences.getString(ConfigureUID.getUID() + "expert", "");
         parentLayout = findViewById(android.R.id.content);
+        localDate = new LocalDate();
         setContentView(R.layout.activity_trainer);
         findViewById(R.id.trainer_home_page);
         findViewById(R.id.trainer_training_page);
@@ -134,6 +139,12 @@ public class TrainerActivity extends AppCompatActivity implements RangeTimePicke
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 if(tabCount==1) {
                     createTrainButton.setEnabled(true);
+                    LocalDate localDateTraining = LocalDate.parse(year+"-"+(month+1)+"-"+day);
+                    if(Days.daysBetween(localDate,localDateTraining).getDays()>7)
+                    {
+                        toast.toastMessage("Create a training allows up to one 7 days");
+                        return;
+                    }
                 }
                 month = month + 1;
                 DAY_OF_MONTH = day;
