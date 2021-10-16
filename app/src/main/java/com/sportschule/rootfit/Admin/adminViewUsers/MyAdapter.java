@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 import com.sportschule.rootfit.R;
 import com.sportschule.rootfit.RemoveUserAccount;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,7 +42,7 @@ import static android.widget.Toast.LENGTH_LONG;
 public class MyAdapter extends RecyclerView.Adapter <MyAdapter.MyViewHolder>{
     Context context;
     ArrayList<Users> list;
-    ArrayList<String> listfirebaseIDs;
+    ArrayList<String> listFirebaseIDs;
     FirebaseFirestore db;
     FirebaseDatabase dbPhone = FirebaseDatabase.getInstance();
     DatabaseReference root = dbPhone.getReference("");
@@ -50,7 +52,7 @@ public class MyAdapter extends RecyclerView.Adapter <MyAdapter.MyViewHolder>{
     public MyAdapter(Context context, ArrayList<Users> list, ArrayList<String> listIDs) {/*,ArrayList<String> listIDs*/
         this.context = context;
         this.list = list;
-        this.listfirebaseIDs = listIDs;
+        this.listFirebaseIDs = listIDs;
     }
 
     @NonNull
@@ -124,7 +126,7 @@ public class MyAdapter extends RecyclerView.Adapter <MyAdapter.MyViewHolder>{
         });
         db = FirebaseFirestore.getInstance();
         Users user = list.get(position);
-        String uID =  listfirebaseIDs.get(position);
+        String uID =  listFirebaseIDs.get(position);
         holder.First.setText(user.getFirst());
         holder.Last.setText(user.getLast());
         holder.Age.setText(user.getAge());
@@ -133,6 +135,7 @@ public class MyAdapter extends RecyclerView.Adapter <MyAdapter.MyViewHolder>{
         holder.Email.setText(user.getEmail());
         holder.State.setText(user.getState());
         holder.Username.setText(user.getUsername());
+        Picasso.get().load(user.getProfileIcon(uID)).into(holder.userProfile);
 
         holder.Delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -313,9 +316,11 @@ public class MyAdapter extends RecyclerView.Adapter <MyAdapter.MyViewHolder>{
 
         TextView First, Last, Age, Phone, Gender, Email, State, Username;
         Button Delete,Update;
+        ImageView userProfile;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            userProfile = itemView.findViewById(R.id.admin_user_profile);
             First = itemView.findViewById(R.id.firstName);
             Last = itemView.findViewById(R.id.lastName);
             Age = itemView.findViewById(R.id.age);

@@ -1,5 +1,13 @@
 package com.sportschule.rootfit.Admin.adminViewUsers;
 
+import android.net.Uri;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+
+
 public class Users {
     String Age = null;
     String Email = null;
@@ -11,6 +19,9 @@ public class Users {
     /*private String id = null;*/
     String Gender = null;
     String Expert = null;
+    Uri imageURI;
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+    StorageReference storageReference = storage.getReference();
 
     public Users(){}
 
@@ -87,4 +98,18 @@ public class Users {
 
 
     }
+    public Uri getProfileIcon(String uid) {
+        storageReference.child("users").child(uid).child("profile").getDownloadUrl().
+                addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        imageURI = uri;
+                    }
+                });
+        return imageURI;
+    }
+
+
+
 }
+
