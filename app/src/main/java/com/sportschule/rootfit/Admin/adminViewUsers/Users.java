@@ -1,11 +1,17 @@
 package com.sportschule.rootfit.Admin.adminViewUsers;
 
 import android.net.Uri;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageException;
 import com.google.firebase.storage.StorageReference;
 
+import static com.github.mikephil.charting.charts.Chart.LOG_TAG;
 
 
 public class Users {
@@ -105,11 +111,16 @@ public class Users {
                     public void onSuccess(Uri uri) {
                         imageURI = uri;
                     }
-                });
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                if (e instanceof StorageException &&
+                        ((StorageException) e).getErrorCode() == StorageException.ERROR_OBJECT_NOT_FOUND) {
+                    Log.d(LOG_TAG, "File not exist");
+                }
+            }
+        });
         return imageURI;
     }
-
-
-
 }
 
