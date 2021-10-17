@@ -415,7 +415,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void UpdateStatisticsDB() {
         /*Log.d(TAG, "UpdateStatisticsDB: " + StatisticsHashMap);*/
-        int SignInCntr;
+        int SignInCntr = 0;
 
         SignInCntr =StatisticsHashMap.get("SignIN");
 
