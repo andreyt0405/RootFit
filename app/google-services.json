@@ -8,12 +8,73 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:971187409788:android:9eb1d0720eeef93bbc8af9",
+        "android_client_info": {
+          "package_name": "com.example.andrewdbquery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971187409788-1voola8shoeie6m2ercafnbl39p1bu5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.andrewdbquery",
+            "certificate_hash": "dec49e00e574346d354198b1b5f812756fb07c9b"
+          }
+        },
+        {
+          "client_id": "971187409788-fbnlunpvd45m0jq09eodktd85knmjgie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2N0AfbWnHEkzbB3PJyamCZVeWSMo4cuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971187409788-fbnlunpvd45m0jq09eodktd85knmjgie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:971187409788:android:c3cf903914835decbc8af9",
         "android_client_info": {
           "package_name": "com.sportschule.rootfit"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "971187409788-2ha8a1d555ateviokt57qblj2irj7k3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sportschule.rootfit",
+            "certificate_hash": "3faab41603d146f35b15df5c28192053092af439"
+          }
+        },
+        {
+          "client_id": "971187409788-afr4mprta3s58vqrh1rhamftndf3c3g2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sportschule.rootfit",
+            "certificate_hash": "dec49e00e574346d354198b1b5f812756fb07c9b"
+          }
+        },
+        {
+          "client_id": "971187409788-pa87e5852kfkscna56c7qts88sv4glrb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sportschule.rootfit",
+            "certificate_hash": "9fe9481475f729de725688b21d3b23d059588503"
+          }
+        },
         {
           "client_id": "971187409788-fbnlunpvd45m0jq09eodktd85knmjgie.apps.googleusercontent.com",
           "client_type": 3
